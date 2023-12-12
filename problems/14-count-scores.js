@@ -28,8 +28,35 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
+
+  let ret={};
+
+  for(let key of people)
+  {
+    if(ret[key.name]==undefined)
+    {
+      ret[key.name] = key.score;
+    }
+    else
+    {
+      ret[key.name]+=key.score
+    }
+  }
+
+  return ret
   // Your code here
 }
+/*
+let peeps = [
+  {name: "Anthony", score: 2},
+  {name: "Winnie", score: 2},
+  {name: "Fred", score: 2},
+  {name: "Winnie", score: 2},
+  {name: "Fred", score: 2},
+  {name: "Anthony", score: 2},
+  {name: "Winnie", score: 2}
+];
+console.log(countScores(peeps));*/
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countScores;

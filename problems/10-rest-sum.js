@@ -10,8 +10,18 @@ restSum(0); // => 0
 ***********************************************************************/
 
 function restSum(...otherNums) {
-  // Your code here
+
+  let ret=0;
+
+  for(let nums of otherNums)
+  {
+    ret+=nums;
+  }
+  return ret
+
 }
+
+//console.log(restSum(1, 2, 3, 4, 5, 6, 7, 8, 9))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = restSum;

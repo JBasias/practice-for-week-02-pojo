@@ -11,6 +11,8 @@ doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
+
+  return obj[key]!= undefined
   // Your code here
 }
 
